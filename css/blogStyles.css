@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image:
+		url("https://btsdiary.files.wordpress.com/2015/01/blog-background.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+.
+.blogpost {
+	align: center;
+	width: 89%;
+	height: 125px;
+	background: lightgreen;
+	margin: 30px;
+	padding: 5px;
+	float: left;
+	clear: right;
+	opacity:1;
+}
+
+.headerimage {
+	background: lightblue;
+	padding: 5px;
+}
+
+a {
+	font: Verdana;
+	font-size: 20px;
+}
+
+h4 {
+	font: Arial;
+	font-size: 25px;
+	color: orange;
+	padding:20px;
+}
+.footerclass {
+	background-color: yellow;
+}

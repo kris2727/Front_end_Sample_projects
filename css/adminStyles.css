@@ -1,0 +1,66 @@
+@charset "ISO-8859-1";
+
+h1 {
+	
+	color:red;
+}
+
+i {
+	size:15x;
+	color:red;
+}
+
+p {
+	font-size:20px;
+	font:Arial;
+}
+
+body {
+  background-image: url("../imgs/blue.jpg");
+}
+.blogpost{
+align:center;
+width:89%;
+height:125px;
+background:lightgreen;
+margin:30px;
+padding:5px;
+float:left;
+clear:right;
+}
+
+.headerimage{
+background:lightblue;
+padding:5px;
+}
+
+a {
+	margin:20px;
+	padding: 10px;
+	font:Verdana;
+}
+a:link {
+	font-size: 20px;
+	color: blue;
+}
+
+a:visited {
+	font-size: 15px;
+	color: green;
+}
+
+a:hover {
+	font-size: 30px;
+	color: red;
+}
+
+a:active {
+	font-size: 30px;
+	color: orange;
+}
+h4 {
+	
+	font:Arial;
+	font-size:25px;
+	color:orange;
+}
