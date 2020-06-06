@@ -1,15 +1,99 @@
 @charset "ISO-8859-1";
-
+/* Container holding the image and the text */
+.container {
+	position: relative;
+	text-align: center;
+	color: black;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+	position: absolute;
+	bottom: 8px;
+	left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+	position: absolute;
+	top: 8px;
+	left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+	position: absolute;
+	top: 8px;
+	right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+	position: absolute;
+	bottom: 40px;
+	right: 10px;
+  }
+  
+  /* Centered text */
+  .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
 body {
-	background-image:
-		url("https://btsdiary.files.wordpress.com/2015/01/blog-background.png");
+	/*  background-image:
+		url("https://btsdiary.files.wordpress.com/2015/01/blog-background.png"); */
+	background-image: url("../imgs/yellow.jpg");
 	background-repeat: repeat;
 	background-attachment: fixed;
 }
 
-.
+.slidebutton {
+	padding: 15px 25px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: gray;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+  }
+  
+  .slidebutton:hover {background-color: darkgrey}
+  
+  .slidebutton:active {
+	background-color: black;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+.btnclass1{
+	height: 18px;
+	width: 18px;
+	background-image: url("../imgs/pic1\ -\ Copy.jpg");
+}
+.btnclass2{
+	height: 18px;
+	width: 18px;
+	background-image: url("../imgs/pic2\ -\ Copy.jpg");
+}
+.btnclass3{
+	height: 18px;
+	width: 18px;
+	background-image: url("../imgs/pic3\ -\ Copy.jpg");
+}
+.slidesDiv{
+	text-align: center;
+	border: 2px;
+	border-style: solid;
+}
+.blogSlide{
+	display:none;
+}
 .blogpost {
-	align: center;
+	text-align: center;
 	width: 89%;
 	height: 125px;
 	background: lightgreen;
@@ -18,6 +102,7 @@ body {
 	float: left;
 	clear: right;
 	opacity:1;
+	
 }
 
 .headerimage {
@@ -27,12 +112,10 @@ body {
 
 a {
 	font: Verdana;
-	font-size: 20px;
 }
 
 h4 {
 	font: Arial;
-	font-size: 25px;
 	color: orange;
 	padding:20px;
 }

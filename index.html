@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Kris's Blog</title>
 
-<link rel="stylesheet" type="text/css" href="css/blogStyles.css" />
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Kris's Blog</title>
+
+	<link rel="stylesheet" type="text/css" href="css/blogStyles.css" />
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script type="text/javascript" src="assets/blogJS.js"></script>
 </head>
+
 <body>
 	<nav align="right">
-		<a href="/html/">Font Resizer</a> | <a href="/css/">Style Switcher</a>
+		<a href='javascript:;' onclick="fontResize();">Font Resizer</a> | <a href='javascript:;'
+			onclick="changeStyle();">Style Switcher</a>
 		| <a href='admin/login.html'>Admin Login</a>
 	</nav>
-	<article class="headerimage">
+	<!-- <article class="headerimage">
 		<header>
 			<h1 align="center">Kris's Travel Blog</h1>
 		</header>
 		<p align="center">To document Kris's travels and expereinces.</p>
-	</article>
+	</article> -->
+	<div class="container">
+		<img id="blogimage" src="imgs/pic1.jpg" alt="" style="width:100%;">
+		<div class="centered">
+			<h2>Kris's Travel Blog</h2>
+			<p align="center">To document Kris's travels and expereinces.</p>
+		</div>
+		<div class="bottom-right">
+			<button class="btnclass1" onclick=changeImage(1);></button><br />
+			<button class="btnclass2" onclick=changeImage(2);></button><br />
+			<button class="btnclass3" onclick=changeImage(3);></button>
+		</div>
+	</div>
 	<br />
+	<div align="center"><button class="slidebutton" onclick="startSlides();">Play Slides</button> <button
+			class="slidebutton" onclick="stopSlides();">Stop Slides</button></div>
 	<br />
-	<article>
+	<div class="slidesDiv">
+
+		<article class="blogSlide" style="display: block;">
+			<h2>Atlanta Trip</h2>
+			<p>We went to Atlanta on wintery weekend in Jan 2020. It had lot of tourist attractions</p>
+		</article>
+
+		<article class="blogSlide">
+			<h2>Savannah Trip</h2>
+			<p>Savannah is one of the first planned Cities of America. It has a river front and a very old history.</p>
+		</article>
+
+		<article class="blogSlide">
+			<h2>Myrtle Beach</h2>
+			<p>Myrtle beach is one of the most famous summer destinations from Charlotte. It is quite tourist city with
+				attractions like Wonderworks</p>
+		</article>
+		<article class="blogSlide">
+			<h2>BMW factory near spartanburg</h2>
+			<p>BMW factory in South carolina offers plant tours and it is a very educating expereince.</p>
+		</article>
+	</div>
+
+	<!-- <article>
 
 		<table border="1" cellpadding="5" cellspacing="20" width="100%">
 			<tr>
@@ -67,12 +108,17 @@
 				</td>
 		</table>
 
-	</article>
+	</article> -->
 	<footer>
 		<p class="footerclass" align="center">This Blog website created for NBAD course
 			learning during Summer 2020 at UNCC. All copyrights reserved</p>
 
 	</footer>
 
+	<script>
+
+
+	</script>
 </body>
+
 </html>
