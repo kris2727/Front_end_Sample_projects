@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Kris's Blog</title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/blogStyles.css" />
+<script type="text/javascript" src="../assets/blogJS.js"></script>
+</head>
+<body  >
+	<nav align="right">
+		<a href='javascript:;' onclick="fontResize();">Font Resizer</a> | <a href='javascript:;'
+			onclick="changeStyle();">Style Switcher</a>
+		| <a href='../admin/login.html'>Admin Login</a>
+	</nav>
+	<article class="headerimage">
+		<header>
+			<h1 align="center">Kris's Travel Blog</h1>
+		</header>
+		<p align="center">To document Kris's travels and expereinces.</p>
+	</article>
+
+	<article>
+	<br/><br/><br/>
+	<div align="center" width="20%" border="1px">
+	<p><b> <%= postName %> </b></p>
+	<br/>
+	<%= postText %>
+		
+		</div></article>
+		
+		<br/>
+		<br/>
+		
+		<div align="center"><a type="button" href="/"> Back</a></div>
+</body>
+</html>

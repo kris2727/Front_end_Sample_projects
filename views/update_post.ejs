@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Kris's Blog</title>
+<link rel="stylesheet" type="text/css" href="../css/adminStyles.css" />
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="../assets/blogJS.js"></script>
+</head>
+<body>
+<nav align="right">
+    <a href='javascript:;' onclick="fontResize();">Font Resizer</a> | <a href='javascript:;'
+    onclick="changeStyle();">Style Switcher</a> |
+<a href='../admin/login.html'>Admin Login</a> |
+<a href="../index.html">Home page</a>   
+</nav>
+<article>
+<header> <h1 align="center">Kris's Travel Blog - Admin login</h1> </header>
+ <p align="center">To update the existing Post</p>
+</article>
+
+<form id="updatePosttext" action='/post' method="POST" onsubmit="event.preventDefault()">
+    <input type="hidden" id="postID" value="<%= postID %>" />
+<div align="center"> <textarea id="status" style="color: red;" rows=3 cols=100 value="textresult">Text Area to show operation result</textarea></div><br/> <br/>
+<div align="center">
+	Post Title: <input id="postName" type="text" width="200px" value="<%= postName %>"/> <br/> <br/>
+	Post text: <br/><textarea id="postText" rows="15" cols="100"><%= postText %> </textarea> <br/><br/><br/>
+	
+	<input type="submit" name="AddPost" value="Update Post" onclick="updatePost()"/>
+	
+</div>
+</form>
+
+</body>
+</html>

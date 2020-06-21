@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Kris's Blog</title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/adminStyles.css" />
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="../assets/blogJS.js"></script>
+</head>
+<body>
+<nav align="right">
+    <a href='javascript:;' onclick="fontResize();">Font Resizer</a> | <a href='javascript:;'
+    onclick="changeStyle();">Style Switcher</a> | 
+<a href='login.html'>Admin Login</a> |
+<a href="../index.html">Home page</a>   
+</nav>
+<article>
+<header> <h1 align="center">Admin Login</h1> </header>
+ <p align="center">Posts Management</p>
+</article>
+
+<form action=''>
+<div align="center"> <textarea id="status" style="color: red" rows=3 cols=100 value="textresult"></textarea></div><br/> <br/>
+<div align="center">
+	  
+    <table border="1" cellpadding="7" cellspacing="0">
+        <tr>
+          
+          <th>Post ID</th>
+          <th>Post Title</th>
+          <th colspan="4">
+            Operations
+            </th>
+        </tr>
+        <% if(data.length){ 
+          for(var i = 0;i < data.length;i++) { %>
+        <tr>
+          <td><%=data[i].id%></td>
+          <td><%=data[i].post%></td>
+          <td><a title="View Post" href="/post/<%=data[i].id%>"><i class="fas fa-glasses"></i></a></td>
+		<td><a title="Edit Post" href="/updatePost/<%=data[i].id%>"><i class="fas fa-edit"></i></a></td>
+		<td><button title="Delete Post" onclick="deletePost('<%=data[i].id%>')"><i class="fas fa-trash-alt"></i></td></button>
+		<td><i class="fas fa-eye"></i> / <i class="fas fa-eye-slash"></i></td>
+        </tr>
+        <% }
+        }else{ %>
+        <tr>
+          <td colspan="3">No Posts</td>
+        </tr>
+      <% } %>
+      </table>
+
+</div>
+</form>
+
+</body>
+</html>
