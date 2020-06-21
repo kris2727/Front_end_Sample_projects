@@ -17,3 +17,23 @@
  7. make sure blod.db is also copied into the same folder.
 
  8. hit the application in browser by the URL - http://localhost:9000
+
+
+// Mile stone 6 update:
+
+End points for user management APIs:
+
+1. Add new user
+    POST - http://localhost:9000/api/rest/v1/user?userName=cartoon225&userEmail=CN@gmail.com22255&password=funfun22
+    
+2. List all users
+    GET - http://localhost:9000/api/rest/v1/user
+
+3. Fetch individual user profile
+    GET - http://localhost:9000/api/rest/v1/user/2
+
+4. Delete user profile
+    DELETE - http://localhost:9000/api/rest/v1/user/3    
+
+5. Update user profile
+    POST - http://localhost:9000/api/rest/v1/user/1?userName=Taylortt99&userEmail=markT@home.com99&password=donttell7779 
