@@ -21,9 +21,9 @@
 <div align="center"> <textarea rows=3 cols=100 value="textresult">Text Area to show operation result</textarea></div><br/> <br/>
 <div align="center">
 	Post Title: <input type="text" width="200px" value="Post1"></input> <br/> <br/>
-	Post text: <br/><textarea rows="15" cols="100"></textarea> <br/><br/><br/>
+	Post text: <br/><textarea rows="15" cols="100"> <%= postText %> </textarea> <br/><br/><br/>
 	
-	<input type="submit" name="AddPost" value="Update Post" />
+	<input type="submit" name="AddPost" value="Update Post" onclick="updatePost()"/>
 	
 </div>
 </form>

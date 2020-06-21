@@ -4,13 +4,14 @@
 <meta charset="ISO-8859-1">
 <title>Kris's Blog</title>
 <link rel="stylesheet" type="text/css" href="../css/adminStyles.css" />
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="../assets/blogJS.js"></script>
 </head>
 <body>
 <nav align="right">
-<a href="/html/">Font Resizer</a> | 
-<a href="/css/">Style Switcher</a> | 
-<a href='login.html'>Admin Login</a> |
+	<a href='javascript:;' onclick="fontResize();">Font Resizer</a> | <a href='javascript:;'
+    onclick="changeStyle();">Style Switcher</a> |
+<a href='../admin/login.html'>Admin Login</a> |
 <a href="../index.html">Home page</a>   
 </nav>
 <article>
@@ -18,19 +19,39 @@
  <p align="center">To add a new Post</p>
 </article>
 
-<form action=''>
-<div align="center"> <textarea rows=3 cols=100 value="textresult">Text Area to show operation result</textarea></div><br/> <br/>
+<form id="addUser" enctype="text/plain" action='/post' method="POST" onsubmit="event.preventDefault()">
+<div align="center"> <textarea id="status" rows=3 cols=100 value="textresult" style="color: red;">Text Area to show operation result</textarea></div><br/> <br/>
 <div align="center">
-	Post Title: <input type="text" width="200px" /> <br/> <br/>
-	Post text: <br/><textarea rows="15" cols="100"></textarea> <br/><br/><br/><br/><br/>
+	Post Title: <input name="namePostName" id="postName" type="text" width="200px" required /> <br/> <br/>
+	Post Text: Max file size allowed 500kb  <input onchange="checkfile()" type="file" id="txtfile" name="blogtextfile" accept=".txt" /><br/>OR<br/><textarea name="namepostText" id="postText" rows="15" cols="100"></textarea> <br/><br/><br/><br/>
 	
-	<input type="submit" name="Add Post" value="Click to create new Post" />
+	<button id="createButton" type="submit" name="Add Post" value="Click to create new Post" onclick="savePost()">Create Post</button>
 	
 </div>
 </form>
 
-
-
+<script type="text/javascript"> 
+	document.getElementById('txtfile') 
+		.addEventListener('change', function() { 
+		  
+		var fr=new FileReader(); 
+		fr.onload=function(){ 
+			document.getElementById('postText') 
+					.textContent=fr.result; 
+		} 
+		maxfilesize = 500;
+		filesize =   (this.files[0].size);
+		//alert(filesize);
+		if(filesize > maxfilesize)
+		{
+			document.getElementById('status').innerHTML = "File too large. Upload a smaller file";
+			document.getElementById('txtfile').value = "";		
+		}
+		else{
+		fr.readAsText(this.files[0]); 
+		}
+	})
+</script> 
 
 
 

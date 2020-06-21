@@ -1,0 +1,30 @@
+{
+  "name": "nodejsprojects",
+  "version": "1.0.0",
+  "description": "For NBAD course learning",
+  "main": "WebApp.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kris2727/Kris_801164922.git"
+  },
+  "author": "Kris Reddivari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kris2727/Kris_801164922/issues"
+  },
+  "homepage": "https://github.com/kris2727/Kris_801164922#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "sqlite3": "^4.2.0"
+  }
+}
